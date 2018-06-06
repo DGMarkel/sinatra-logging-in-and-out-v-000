@@ -22,8 +22,6 @@ class ApplicationController < Sinatra::Base
 
   get '/account' do
     if Helpers.is_logged_in?(session)
-
-      binding.pry
       erb :account
     else
       erb :error
